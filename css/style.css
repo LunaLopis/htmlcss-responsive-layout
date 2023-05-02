@@ -41,17 +41,17 @@ header {
 
 
 /* TABLET */
-@media screen and(max-width:768px) {
+@media screen and (min-width: 768px) {
     
 }
 /* DESKTOP */
-@media screen and(max-width:991px) {
+@media screen and (min-width: 991px) {
     
 }
 
 
 /* LARGE-DESKTOP */
-@media screen and(max-width:1200px) {
+@media screen and (min-width: 1200px) {
     .extended-menu {
         display: block;
     }
