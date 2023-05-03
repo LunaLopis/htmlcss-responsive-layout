@@ -8,21 +8,27 @@
 header {
     background-color: lightskyblue;
 }
+
 .container {
-    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 .header-flex {
     display: flex;
     justify-content: space-between;
 }
 
-.left-logo, .right-menu {
-    width: 100px;
+.left-logo,
+.right-menu {
+    width: calc(100px - 20px);
     height: 100px;
     background-color: yellow;
+    margin: 10px;
 }
 
-.hamburger, .extended-menu {
+.hamburger,
+.extended-menu {
     width: 100%;
     height: 100%;
 }
@@ -36,26 +42,143 @@ header {
     display: none;
 }
 
+.row {
+    width: 100%;
+    flex-direction: column;
+}
 
+.col-double,
+.col-30 {
+    width: calc(100% - 20px);
+    height: 300px;
+    background-color: red;
+    margin: 10px;
+}
 
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.content div {
+    padding: 10px;
+}
+
+.content {
+    border-radius: 20px;
+    background-color: aqua;
+}
+
+#benefits {
+    background-color: rgb(169, 91, 242);
+}
+.row.center {
+   text-align: center;
+}
 
 
 /* TABLET */
 @media screen and (min-width: 768px) {
-    
+    .container {
+        width: 750px;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        flex-direction: row;
+    }
+
+    .col-double {
+        width: calc(100% / 2 * 2 - 20px);
+    }
+
+    .col-30 {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .still-100 {
+        width: calc(100% - 20px);
+    }
+    .still-col {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-60 {
+        width: 60%;
+    }
+    .col-40 {
+        width: 40%;
+    }
+    .row.center {
+        display: flex;
+        justify-content: center;
+    }
 }
+
+
+
 /* DESKTOP */
 @media screen and (min-width: 991px) {
-    
+    .container {
+        max-width: 950px;
+    }
+
+    .extended-menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .col-double {
+        width: calc(100% / 3 * 2 - 20px);
+    }
+
+    .col-30 {
+        width: calc(100% / 3 - 20px);
+    }
+    .still-100 {
+        width: calc(100% - 20px);
+    }
+    .still-col {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-60 {
+        width: 60%;
+    }
+    .col-40 {
+        width: 40%;
+    }
+
+    .row.center {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
 /* LARGE-DESKTOP */
+
 @media screen and (min-width: 1200px) {
-    .extended-menu {
-        display: block;
+    .container {
+        max-width: 1140px;
     }
-    .hamburger {
-        display: none;
-    }
+}
+
+
+
+.back-yellow {
+    background-color: yellow;
+}
+
+.back-lightgreen {
+    background-color: rgb(2, 186, 9);
 }
